@@ -1,4 +1,3 @@
-## Thanks for buy this notifications.
 
 ## This is an example: 
 
