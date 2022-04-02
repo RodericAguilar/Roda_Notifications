@@ -1,0 +1,241 @@
+@font-face {
+  font-family: Nesatho;
+  src: url(https://cdn.discordapp.com/attachments/937063390961074226/959161255296397312/Nesatho.ttf);
+}
+
+@font-face {
+  font-family: parrafo;
+  src: url(https://cdn.discordapp.com/attachments/937063390961074226/959163514247839805/Poppins-Bold.ttf);
+}
+
+body {
+  font-size: 0.8vw;
+  overflow: hidden;
+}
+
+.notify-append {
+  position: relative;
+  height: fit-content;
+  min-height: 2vw;
+  width: 15vw;
+  max-width: 20vw;
+  margin-top: 0.5vw;
+  border-radius: 0.4vw;
+  background-color: rgb(34, 34, 34);
+}
+
+.notify-append::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 50%;
+  background-color: transparent;
+  height: 100%;
+  /* box-shadow: 0 0 0.0vw 0.0vw #ff0000, 0 0 0.2vw 0.1vw #ff0000; */
+  z-index: -1;
+  animation-name: half-yellow-shadow;
+  animation-timing-function: ease;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  border-radius: 0.4vw;
+}
+
+.notify-append::after {
+  content: "";
+  position: absolute;
+  background-color: transparent;
+  right: 0;
+  bottom: 0;
+  width: 50%;
+  height: 100%;
+  /* box-shadow: 0 0 0.0vw 0.0vw #ff0000, 0 0 0.2vw 0.1vw #ff0000; */
+  z-index: -1;
+  animation-name: half-cyan-shadow;
+  animation-timing-function: ease;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  border-radius: 0.4vw;
+}
+
+.notify-append > h1 {
+  position: absolute;
+  top: 0.2vw;
+  left: 3vw;
+  color: white;
+  font-family: "Nesatho";
+  font-size: 0.8vw;
+  color: red;
+}
+
+.notify-append > i {
+  position: absolute;
+  color: white;
+  left: 10%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2vw;
+  color: red;
+}
+
+.notify-append > p {
+  padding: 1.8vw 1vw 1vw 3vw;
+  color: white;
+  font-family: "parrafo";
+  font-size: 0.6vw;
+}
+
+.notify {
+  position: absolute;
+  width: 15vw;
+  max-width: 20vw;
+  height: 80%;
+  top: 10vw;
+  right: 1vw;
+}
+
+.normal::before {
+  box-shadow: 0 0 0vw 0vw blue, 0 0 0.2vw 0.1vw blue;
+}
+
+.normal::after {
+  box-shadow: 0 0 0vw 0vw blue, 0 0 0.2vw 0.1vw blue;
+}
+
+.warn::before {
+  box-shadow: 0 0 0vw 0vw yellow, 0 0 0.2vw 0.1vw yellow;
+}
+
+.warn::after {
+  box-shadow: 0 0 0vw 0vw yellow, 0 0 0.2vw 0.1vw yellow;
+}
+
+.success::before {
+  box-shadow: 0 0 0vw 0vw rgb(0, 255, 0), 0 0 0.2vw 0.1vw rgb(0, 255, 0);
+}
+
+.success::after {
+  box-shadow: 0 0 0vw 0vw rgb(0, 255, 0), 0 0 0.2vw 0.1vw rgb(0, 255, 0);
+}
+
+.error::before {
+  box-shadow: 0 0 0vw 0vw #ff0000, 0 0 0.2vw 0.1vw #ff0000;
+}
+
+.error::after {
+  box-shadow: 0 0 0vw 0vw #ff0000, 0 0 0.2vw 0.1vw #ff0000;
+}
+
+.twt::before {
+  box-shadow: 0 0 0vw 0vw #1A8CD8, 0 0 0.2vw 0.1vw #1A8CD8;
+}
+
+.twt::after {
+  box-shadow: 0 0 0vw 0vw #1A8CD8, 0 0 0.2vw 0.1vw #1A8CD8;
+}
+
+.info::after {
+  box-shadow: 0 0 0vw 0vw #ff0000, 0 0 0.2vw 0.1vw aqua;
+}
+
+.info::before {
+  box-shadow: 0 0 0vw 0vw #ff0000, 0 0 0.2vw 0.1vw aqua;
+}
+
+.announce::after {
+  box-shadow: 0 0 0vw 0vw rgb(255, 0, 225), 0 0 0.2vw 0.1vw rgb(255, 0, 225);
+}
+
+.announce::before {
+  box-shadow: 0 0 0vw 0vw rgb(255, 0, 225), 0 0 0.2vw 0.1vw rgb(255, 0, 225);
+}
+
+@keyframes half-yellow-shadow {
+  0% {
+    top: 0;
+    left: 0;
+    height: 50%;
+    width: 50%;
+  }
+  16.66% {
+    top: 0;
+    left: 0;
+    height: 50%;
+    width: 100%;
+  }
+  32.32% {
+    top: 0;
+    left: 50%;
+    height: 50%;
+    width: 50%;
+  }
+  49.98% {
+    top: 50%;
+    left: 50%;
+    height: 50%;
+    width: 50%;
+  }
+  66.64% {
+    top: 50%;
+    left: 0;
+    height: 50%;
+    width: 100%;
+  }
+  83.3% {
+    top: 50%;
+    left: 0;
+    height: 50%;
+    width: 50%;
+  }
+  100% {
+    top: 0;
+    left: 0;
+    height: 50%;
+    width: 50%;
+  }
+}
+
+@keyframes half-cyan-shadow {
+  0% {
+    bottom: 0;
+    right: 0;
+    height: 50%;
+    width: 50%;
+  }
+  16.66% {
+    bottom: 0;
+    right: 0;
+    height: 50%;
+    width: 100%;
+  }
+  32.32% {
+    bottom: 0;
+    right: 50%;
+    height: 50%;
+    width: 50%;
+  }
+  49.98% {
+    bottom: 50%;
+    right: 50%;
+    height: 50%;
+    width: 50%;
+  }
+  66.64% {
+    bottom: 50%;
+    right: 0;
+    height: 50%;
+    width: 100%;
+  }
+  83.3% {
+    bottom: 50%;
+    right: 0;
+    height: 50%;
+    width: 50%;
+  }
+  100% {
+    bottom: 0;
+    right: 0;
+    height: 50%;
+    width: 50%;
+  }
+}
